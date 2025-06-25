@@ -23,7 +23,7 @@ csvtool/
 ├── tests/
 │   └── test_cli.py       # Pytest unit tests
 ├── data.csv              # Example CSV (user provided)
-├── apppy                 # Streamlit UI
+├── app.py                 # Streamlit UI
 ├── requirements.txt      # All dependencies
 ├── .gitignore
 └── README.md
