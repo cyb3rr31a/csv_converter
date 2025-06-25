@@ -1,4 +1,4 @@
-# 🛠️ CSVTool – CSV to JSON/SQL Converter (CLI + Streamlit)
+# 🛠️ CSVLab – CSV to JSON/SQL Converter (CLI + Streamlit)
 
 > A command-line and GUI-based Python tool that converts CSV files to JSON or SQL INSERT statements with optional row filtering. Built with Python, Pandas, and Streamlit.
 
