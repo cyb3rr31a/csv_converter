@@ -72,8 +72,8 @@ python src/cli.py --input data.csv --output-format json
 |------------------|--------------------------------------------------|
 | `--input` / `-i`  | Input CSV file path (required)                  |
 | `--output-format` / `-f` | `json` or `sql` output format (required)    |
-| `--filter-column` | (Optional) Column name to filter by            |
-| `--filter-value`  | (Optional) Value to filter for                 |
+| `--filter-column` | Column name to filter by            |
+| `--filter-value`  | Value to filter for                 |
 | `--output` / `-o` | Output file name (default: `output`)            |
 | `--table-name`    | (SQL only) name of the SQL table (default: `my_table`) |
 
@@ -125,7 +125,7 @@ streamlit run app.py
 
 ### Features:
 - Upload CSV
-- Optional filtering
+- Filtering
 - Choose output format (`json` or `sql`)
 - Download the result
 
@@ -143,8 +143,8 @@ streamlit run app.py
 
 ### SQL
 ```sql
-INSERT INTO my_table (`id`, `name`, `age`) VALUES ('1', 'Alice', '30');
-INSERT INTO my_table (`id`, `name`, `age`) VALUES ('2', 'Bob', '25');
+INSERT INTO my_table (id, name, age) VALUES (1, 'Alice', 30);
+INSERT INTO my_table (id, name, age) VALUES (2, 'Bob', 25);
 ```
 
 ---
