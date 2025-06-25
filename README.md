@@ -20,10 +20,10 @@
 csvtool/
 ├── src/
 │   └── cli.py            # Main CLI logic
-│   └── app.py            # Streamlit GUI
 ├── tests/
 │   └── test_cli.py       # Pytest unit tests
 ├── data.csv              # Example CSV (user provided)
+├── apppy                 # Streamlit UI
 ├── requirements.txt      # All dependencies
 ├── .gitignore
 └── README.md
