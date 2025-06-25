@@ -36,10 +36,19 @@ def export_to_sql(df, output_file, table_name='my_table'):
         print(f"❌ Failed to export SQL: {e}")
         sys.exit(1)
 
+def filter_dataframe(df, column, value):
+    if column and value:
+        if column not in df.columns:
+            print(f"❌ Column '{column}' not found in CSV.")
+            sys.exit(1)
+        return df[df[column].astype(str) == str(value)]
+
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Convert CSV to JSON or SQL with optional filtering.')
     parser.add_argument('--input', '-i', required=True, help='Input CSV file path')
     parser.add_argument('--output-format', '-f', required=True, choices=['json', 'sql'], help='Output format')
+    parser.add_argument('--filter-column', help='Column name to filter by')
+    parser.add_argument('--filter-value', help='Value to match in filter column')
     parser.add_argument('--output', '-o', default='output', help='Base name for output file')
     parser.add_argument('--table-name', default='my_table', help='(For SQL) Name of the SQL table')
     return parser.parse_args()
@@ -58,6 +67,6 @@ if __name__ == '__main__':
     main()
 
 # Usage
-# python src/cli.py --input data.csv --output-format sql
+# python src/cli.py --input data.csv --filter-column country --filter-value Kenya --output-format sql
 # python src/cli.py --input data.csv --output-format json
 
